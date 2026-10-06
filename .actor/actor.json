@@ -1,0 +1,38 @@
+{
+  "$schema": "https://apify.com/schemas/v1/actor.ide.json",
+  "actorSpecification": 1,
+  "name": "mawsool-linkedin-similar-companies",
+  "title": "Find Similar LinkedIn Companies",
+  "description": "Find similar LinkedIn companies from a company URL. Each lookalike includes the name, short description, location, and LinkedIn URL. From $1 per 1,000 source companies.",
+  "seoTitle": "Find Similar LinkedIn Companies",
+  "seoDescription": "Find similar LinkedIn companies from one company URL. Name, description, location, and URL. $1 per 1,000.",
+  "categories": [
+    "LEAD_GENERATION",
+    "SOCIAL_MEDIA"
+  ],
+  "version": "1.0",
+  "buildTag": "latest",
+  "minMemoryMbytes": 256,
+  "maxMemoryMbytes": 1024,
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 21600,
+    "memoryMbytes": 256
+  },
+  "environmentVariables": {
+    "ACTOR_SLICE": "similar",
+    "CHARGE_EVENT": "similar-companies",
+    "COMPANY_API_KEY": "@mawsoolCompanyApiKey"
+  },
+  "meta": {
+    "templateId": "ts-empty",
+    "generatedBy": "Cursor Agent"
+  },
+  "input": "./input_schema.json",
+  "output": "./output_schema.json",
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "pricing": "./pay_per_event.json",
+  "dockerfile": "../Dockerfile"
+}
